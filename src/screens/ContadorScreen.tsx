@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import { Fab } from '../components/Fab'
 
 export const ContadorScreen = () => {
   const [contador, setContador] = useState(10)
@@ -10,13 +11,8 @@ export const ContadorScreen = () => {
         Contador: {contador}
       </Text>
 
-      <TouchableOpacity
-        onPress={() => setContador(contador + 1)}
-      >
-        <View style={styles.botonIncrementar}>
-          <Text>+1</Text>
-        </View>
-      </TouchableOpacity>
+      <Fab title='-1' onPress={() => setContador(contador - 1)} position='bl' />
+      <Fab title='+1' onPress={() => setContador(contador + 1)} />
     </View>
   )
 }
@@ -24,15 +20,12 @@ export const ContadorScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
     justifyContent: 'center'
   },
   title: {
     textAlign: 'center',
     fontSize: 40,
     top: -15
-  },
-  botonIncrementar: {
-    backgroundColor: 'red',
-    borderRadius: 100
   }
 })
