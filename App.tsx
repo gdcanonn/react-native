@@ -1,10 +1,21 @@
 import React from 'react'
-import { ContadorScreen } from './src/screens/ContadorScreen'
+import { SafeAreaView } from 'react-native'
+import { TareaScreen } from './src/screens/TareaScreen'
 
 const App = () => {
   return (
-    // <HolaMundoScreen />
-    <ContadorScreen />
+    <SafeAreaView style={{
+      flex: 1,
+      backgroundColor: '#28425B'
+    }}>
+      {/* <HolaMundoScreen /> */}
+      {/* <ContadorScreen /> */}
+      {/* <BoxObjectModelScreen /> */}
+      {/* <DimensionesScreen /> */}
+      {/* <PositionScreen /> */}
+      {/* <FlexScreen /> */}
+      <TareaScreen />
+    </SafeAreaView>
   )
 }
 
